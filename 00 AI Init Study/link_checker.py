@@ -18,7 +18,7 @@ import random
 from collections import deque
 
 # ============ 配置 ============
-BASE_URL = "https://www.hsbcjt.cn"
+BASE_URL = "https://www.baidu.com"
 # 坏链报告CSV输出路径
 CSV_OUTPUT = "broken_links_report.csv"
 # 所有链接及其来源CSV输出路径
@@ -143,8 +143,8 @@ def is_internal_link(href):
     # 以本站域名开头的绝对路径
     if href.lower().startswith(BASE_URL.lower()):
         return True
-    # 协议相对路径 //uat3.hsbcjt.cn/...
-    if href.startswith('//') and 'www.hsbcjt.cn' in href.lower():
+    # 协议相对路径 //www.baidu.com/...
+    if href.startswith('//') and 'www.baidu.com' in href.lower():
         return True
     return False
 
